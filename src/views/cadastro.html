@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet PhoneJa - Cadastro de Clientes</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cadastro.css">
+    
+
+</head>
+
+<body>
+    <header>
+        <img src="assets/icones/logo.svg" alt="logomarca">
+        <a href="/"> <span></span> Voltar para home</a>
+    </header>
+
+    <form name="form1" action="">
+        
+        <img class="imgCadastro" src="assets/icones/register.svg" alt="ícone de uma pasta de arquivo com uma silhueta humana">
+
+        <h1> PhoneJa - Cadastro de Clientes</h1>
+
+        <fieldset>
+            <legend>
+                <h2> Dados do Cliente</h2>
+            </legend>
+
+            <div class="nomeCompleto">
+                <label for="">Nome Completo</label>
+                <input type="text" name="name" id="" required>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="phone">Telefone</label>
+                    <input type="text" name="phone" required>
+                </div>
+
+                <div class="field">
+                    <label for="data">CPF</label>
+                    <input type="text" name="data" required>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="adress">Endereço</label>
+                    <input type="text" name="adress" required>
+                </div>
+
+                <div class="field">
+                    <label for="adress">Número/Complemento</label>
+                    <input type="text" name="adress2" required>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="state">Estado</label>
+                    <select name="uf" id="" required>
+                        <option value="">Selecione o Estado</option>
+                    </select>
+
+                    <input type="hidden" name="state">
+                </div>
+
+                <div class="field">
+                    <label for="city">Cidade</label>
+                    <!-- disable não permite selecionar a cidade antes do estado-->
+                    <select name="city" disabled required>
+                        <option value="">Selecione a Cidade</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <h2> Dados da Compra</h2>
+            </legend>
+
+            <div class="itens-grid">
+                <li data-id="1">
+                    <img src="assets/icones/phone-call.svg" alt="ícone de um aparelho celular"><span>Aparelho Celular</span>
+                </li>
+
+                <li data-id="2">
+                    <img src="assets/icones/headphones.svg" alt="ícone de um fone de ouvido conectado a internet"><span>Acessórios</span>
+                </li>
+
+                <li data-id="3">
+                    <img src="assets/icones/payment.svg" alt=" íicone de um celular com simbolo de dinheiro"><span>Recarga</span>
+                </li>
+            </div>
+            <input type="hidden" name="items">
+        </fieldset>
+
+        <fieldset>
+
+            <div class="dadosCompra-grupo">
+                <div>
+                    <label for=""></label>Valor da Compra</label>
+                    <input type="text" name="_valorCompra" id="valorCompra">
+                </div>
+
+                <div>
+                    <label for=""></label>Modelo do Celular</label>
+                    <input type="text" name="_modelo" id="modelo">
+                </div>
+            </div>
+
+            <div class="dadosCompra-grupo">
+                <div>
+                    <label for=""></label>Ano do Celular</label>
+                    <input type="text" name="_anoCel" id="anoCelular">
+                </div>
+
+                <div>
+                    <label for=""></label>Cor do Celular</label>
+                    <input type="text" name="_corCel" id="corCelular">
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>
+                <h2> Dados do Vendedor e Loja</h2>
+            </legend>
+
+            <div class="dadosVendaLoja-grupo">
+                <div>
+                    <label for=""></label>Vendedor(a)</label>
+                    <input type="text" name="name2" id="">
+                </div>
+
+                <div>
+                    <label for=""></label>Loja</label>
+                    <input type="text" name="loja" id="">
+                </div>
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit">REGISTRAR CLIENTE</button>
+        </div>
+    </form>
+
+
+
+    <script src="Javascript/script.js"></script>
+</body>
+
+</html>
