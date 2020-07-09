@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #fcfcdf;
-    padding: 20px;
+    padding: 10px;
 }
 
 header img {
@@ -102,20 +102,21 @@ form button {
     font-size: 16px ;
     border: 0;
     margin-top: 10px;
-    transition: background-color 400ms;
+    transition: 400ms;
 }
 
 form button:hover {
     background-color: #f19c4c;
 }
+
 .register {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: white;
     border-radius: 35px;
-    margin: 20px 50px 20px 50px;
-    padding: 40px;
+    margin: 20px 50px 20px 20px;
+    padding: 50px;
 }
 
 .imgCadastro {
@@ -133,9 +134,9 @@ button {
     font-size: 16px ;
     border: 0;
     margin-top: 40px;
-    transition: background-color 400ms;
+    transition: 400ms;
 }
 
 button:hover {
-    background-color: #f19c4c;
+    opacity: 90%;
 }

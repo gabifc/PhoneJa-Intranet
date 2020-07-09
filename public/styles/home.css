@@ -9,7 +9,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #fcfcdf;
-    padding: 15px;
+    padding: 10px;
 }
 
 header img {
@@ -64,7 +64,7 @@ main p {
 }
 
 main img {
-    margin: 50px 150px 0 250px;
+    margin: 30px 150px 0 250px;
 }
 
 main button{

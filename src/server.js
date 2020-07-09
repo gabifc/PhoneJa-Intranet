@@ -21,5 +21,8 @@ server.get("/login", (req, res) => {
 server.get("/dashboard", (req, res) => {
   return res.render("dashboard.html")
 })
+server.get("/clientes", (req, res) => {
+  return res.render("clientes.html")
+})
 
 server.listen(3000)

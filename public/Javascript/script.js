@@ -77,3 +77,4 @@ function selectionItem(event) {
   collectedItems.value = selectedItems
 }
 
+
