@@ -100,8 +100,6 @@ server.get("/clientes", (req, res) => {
     // console.log(rows)
     return res.render("clientes.html", { places: rows, total })
   })
-
-
 })
 
 server.listen(3000)
