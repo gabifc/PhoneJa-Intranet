@@ -16,7 +16,7 @@
         <a href="/dashboard"> <span></span> Voltar para dashboard</a>
     </header>
 
-    <form name="form1" action="#">
+    <form action="/envioform" method="POST">
         
         <img class="imgCadastro" src="assets/icones/register.svg" alt="ícone de uma pasta de arquivo com uma silhueta humana">
 
@@ -28,48 +28,48 @@
             </legend>
 
             <div class="nomeCompleto">
-                <label for="">Nome Completo</label>
-                <input type="text" name="name" id="" required>
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="" required>
             </div>
 
             <div class="field-group">
                 <div class="field">
-                    <label for="phone">Telefone</label>
-                    <input type="text" name="phone" required>
+                    <label for="tel">Telefone</label>
+                    <input type="text" name="tel" required>
                 </div>
 
                 <div class="field">
-                    <label for="data">CPF</label>
-                    <input type="text" name="data" required>
-                </div>
-            </div>
-
-            <div class="field-group">
-                <div class="field">
-                    <label for="adress">Endereço</label>
-                    <input type="text" name="adress" required>
-                </div>
-
-                <div class="field">
-                    <label for="adress">Número/Complemento</label>
-                    <input type="text" name="adress2" required>
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" required>
                 </div>
             </div>
 
             <div class="field-group">
                 <div class="field">
-                    <label for="state">Estado</label>
-                    <select name="uf" id="" required>
+                    <label for="end">Endereço</label>
+                    <input type="text" name="end" required>
+                </div>
+
+                <div class="field">
+                    <label for="num">Número/Complemento</label>
+                    <input type="text" name="num" required>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="" required>
                         <option value="">Selecione o Estado</option>
                     </select>
 
-                    <input type="hidden" name="state">
+                    <input type="hidden" name="estadoh">
                 </div>
 
                 <div class="field">
-                    <label for="city">Cidade</label>
+                    <label for="cidade">Cidade</label>
                     <!-- disable não permite selecionar a cidade antes do estado-->
-                    <select name="city" disabled required>
+                    <select name="cidade" disabled required>
                         <option value="">Selecione a Cidade</option>
                     </select>
                 </div>
@@ -81,45 +81,45 @@
                 <h2> Dados da Compra</h2>
             </legend>
 
-            <div data-id="1" class="itens-grid">
-                <li data-id="1">
+            <div class="itens-grid">
+                <li data-id="Celular">
                     <img src="assets/icones/phone-call.svg" alt="ícone de um aparelho celular"><span>Aparelho Celular</span>
                 </li>
 
-                <li data-id="2">
+                <li data-id="Acessório">
                     <img src="assets/icones/headphones.svg" alt="ícone de um fone de ouvido conectado a internet"><span>Acessórios</span>
                 </li>
 
-                <li data-id="3">
+                <li data-id="Recarga">
                     <img src="assets/icones/payment.svg" alt=" íicone de um celular com simbolo de dinheiro"><span>Recarga</span>
                 </li>
             </div>
-            <input type="hidden" name="items">
+            <input type="hidden" name="itens">
         </fieldset>
 
         <fieldset>
 
             <div class="dadosCompra-grupo">
                 <div>
-                    <label for=""></label>Valor da Compra</label>
-                    <input type="text" name="_valorCompra" id="valorCompra">
+                    <label for="valor"></label>Valor da Compra</label>
+                    <input type="text" name="valor" id="valorCompra">
                 </div>
 
                 <div>
-                    <label for=""></label>Modelo do Celular</label>
-                    <input type="text" name="_modelo" id="modelo">
+                    <label for="modelo"></label>Modelo do Celular</label>
+                    <input type="text" name="modelo" id="modelo">
                 </div>
             </div>
 
             <div class="dadosCompra-grupo">
                 <div>
-                    <label for=""></label>Ano do Celular</label>
-                    <input type="text" name="_anoCel" id="anoCelular">
+                    <label for="ano"></label>Ano do Celular</label>
+                    <input type="text" name="ano" id="anoCelular">
                 </div>
 
                 <div>
-                    <label for=""></label>Cor do Celular</label>
-                    <input type="text" name="_corCel" id="corCelular">
+                    <label for="cor"></label>Cor do Celular</label>
+                    <input type="text" name="cor" id="corCelular">
                 </div>
             </div>
         </fieldset>
@@ -132,12 +132,12 @@
 
             <div class="dadosVendaLoja-grupo">
                 <div>
-                    <label for=""></label>Vendedor(a)</label>
-                    <input type="text" name="name2" id="">
+                    <label for="vendedor"></label>Vendedor(a)</label>
+                    <input type="text" name="vendedor" id="">
                 </div>
 
                 <div>
-                    <label for=""></label>Loja</label>
+                    <label for="loja"></label>Loja</label>
                     <input type="text" name="loja" id="">
                 </div>
             </div>

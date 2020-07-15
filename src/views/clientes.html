@@ -15,84 +15,62 @@
         </header>
 
         <main>
-            <h4>Cliente encontrado(a):</h4>
+            {% if total > 0 %}
+                <h4>{{total}}
+                    Cliente(s) encontrado(a):</h4>
 
-            <div class="cards">
+                <div class="cards">
 
-                <div class="card">
-                    <h1>
-                        Amora Fernandes</h1>
-                    <h3>Telefone</h3>
-                    <p>
-                        11989898989
-                    </p>
-                    <h3>CPF</h3>
-                    <p>12345678998</p>
-                    <h3>Endereço</h3>
-                    <p>Avenida do Atlantico</p>
-                    <h3>Número/Complemento</h3>
-                    <p>123</p>
-                    <h3>Estado</h3>
-                    <p>São Paulo</p>
-                    <h3>Cidade</h3>
-                    <p>Campinas</p>
-                    <h2>
-                        <strong>Dados da Compra:</strong>
-                    </h2>
-                    <h3>Valor da Compra</h3>
-                    <p>2000</p>
-                    <h3>Modelo do Celular</h3>
-                    <p>Samsung A10</p>
-                    <h3>Ano do Celular</h3>
-                    <p>2020</p>
-                    <h3>Cor do Celular</h3>
-                    <p>Azul</p>
-                    <h2>
-                        <strong>Dados da Vendedor(a) e Loja</strong>
-                    </h2>
-                    <h3>Vendedor(a)</h3>
-                    <p>Juliana Pereira</p>
-                    <h3>Loja</h3>
-                    <p>Campinas - Centro</p>
+                    {% for place in places %}
+                        <div class="card">
+                            <h1>
+                                {{place.nome}}</h1>
+                            <h3>Telefone</h3>
+                            <p>
+                                {{place.tel}}
+                            </p>
+                            <h3>CPF</h3>
+                            <p>{{place.cpf}}</p>
+                            <h3>Endereço</h3>
+                            <p>{{place.end}}</p>
+                            <h3>Número/Complemento</h3>
+                            <p>{{place.num}}</p>
+                            <h3>Estado</h3>
+                            <p>{{place.estado}}</p>
+                            <h3>Cidade</h3>
+                            <p>{{place.cidade}}</p>
+                            <h3>
+                                <strong>Dados da Compra:</strong>
+                            </h3>
+                            <h3>Itens comprados</h3>
+                            <p>{{place.itens}}</p>
+                            <h3>Valor da Compra</h3>
+                            <p>{{place.valor}}</p>
+                            <h3>Modelo do Celular</h3>
+                            <p>{{place.modelo}}</p>
+                            <h3>Ano do Celular</h3>
+                            <p>{{place.ano}}</p>
+                            <h3>Cor do Celular</h3>
+                            <p>{{place.cor}}</p>
+                            <h2>
+                                <strong>Dados da Vendedor(a) e Loja</strong>
+                            </h2>
+                            <h3>Vendedor(a)</h3>
+                            <p>{{place.vendedor}}</p>
+                            <h3>Loja</h3>
+                            <p>{{place.loja}}</p>
+                        </div>
+
+                    {% endfor %}
+
                 </div>
+                {%else%}
+                <h4>
+                    <strong>Cliente não encontrado</strong>
+                </h4>
 
-                <div class="card">
-                    <h1>
-                        Joao Fernandes</h1>
-                    <h3>Telefone</h3>
-                    <p>
-                        11989898989
-                    </p>
-                    <h3>CPF</h3>
-                    <p>12345678998</p>
-                    <h3>Endereço</h3>
-                    <p>Avenida do Atlantico</p>
-                    <h3>Número/Complemento</h3>
-                    <p>123</p>
-                    <h3>Estado</h3>
-                    <p>São Paulo</p>
-                    <h3>Cidade</h3>
-                    <p>Campinas</p>
-                    <h3>
-                        <strong>Dados da Compra:</strong>
-                    </h3>
-                    <h3>Valor da Compra</h3>
-                    <p>2000</p>
-                    <h3>Modelo do Celular</h3>
-                    <p>Samsung A10</p>
-                    <h3>Ano do Celular</h3>
-                    <p>2020</p>
-                    <h3>Cor do Celular</h3>
-                    <p>Azul</p>
-                    <h2>
-                        <strong>Dados da Vendedor(a) e Loja</strong>
-                    </h2>
-                    <h3>Vendedor(a)</h3>
-                    <p>Juliana Pereira</p>
-                    <h3>Loja</h3>
-                    <p>Campinas - Centro</p>
-                </div>
-            </div>
+            {% endif %}
+
         </main>
 
     </body>

@@ -1,7 +1,7 @@
 // Consumindo API IBGE
 // Seletor de estados
 function popUfs() {
-  const ufSelect = document.querySelector( "select[name=uf]" );
+  const ufSelect = document.querySelector( "select[name=estado]" );
 
   fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
   .then( res => res.json() )
@@ -15,9 +15,9 @@ function popUfs() {
 popUfs();
 
 function popCidade(event) {
-  const citySelect = document.querySelector("select[name=city]");
+  const citySelect = document.querySelector("select[name=cidade]");
 
-  const hiddenInput = document.querySelector("input[name=state]");
+  const hiddenInput = document.querySelector("input[name=estadoh]");
   const ufValue = event.target.value
   const estadoSelecionado = event.target.selectedIndex
   hiddenInput.value = event.target.options[estadoSelecionado].text
@@ -37,7 +37,7 @@ function popCidade(event) {
 
 }
 document
-.querySelector("select[name=uf]") 
+.querySelector("select[name=estado]") 
 .addEventListener("change", popCidade)
 
 
@@ -49,7 +49,7 @@ for (const item of itemsBuy) {
   item.addEventListener("click", selectionItem)
 }
 
-const collectedItems =  document.querySelector("input[name=items]")
+const collectedItems =  document.querySelector("input[name=itens]")
 
 //array do alredySelected
 let selectedItems = []
